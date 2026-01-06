@@ -87,8 +87,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-display font-bold text-2xl text-gray-900 mb-4 mt-12">Contact Us</h2>
             <p className="text-gray-700 leading-relaxed">
               If you have questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:privacy@mycleverdeals.com" className="text-trust-600 hover:text-trust-700 font-semibold">
-                privacy@mycleverdeals.com
+              <a href="mailto:cleverson128@hotmail.com" className="text-trust-600 hover:text-trust-700 font-semibold">
+                cleverson128@hotmail.com
               </a>
             </p>
           </div>

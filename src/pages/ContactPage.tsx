@@ -50,10 +50,10 @@ export default function ContactPage() {
                 We typically respond within 24 hours
               </p>
               <a
-                href="mailto:support@mycleverdeals.com"
+                href="mailto:cleverson128@hotmail.com"
                 className="text-trust-600 hover:text-trust-700 font-semibold"
               >
-                support@mycleverdeals.com
+                cleverson128@hotmail.com
               </a>
             </div>
 

@@ -88,8 +88,8 @@ export default function AffiliateDisclosurePage() {
             <p className="text-gray-700 leading-relaxed">
               If you have any questions about our affiliate relationships or how we operate, please don't 
               hesitate to contact us at{' '}
-              <a href="mailto:info@mycleverdeals.com" className="text-trust-600 hover:text-trust-700 font-semibold">
-                info@mycleverdeals.com
+              <a href="mailto:cleverson128@hotmail.com" className="text-trust-600 hover:text-trust-700 font-semibold">
+                cleverson128@hotmail.com
               </a>
             </p>
           </div>

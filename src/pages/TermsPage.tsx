@@ -69,8 +69,8 @@ export default function TermsPage() {
             <h2 className="font-display font-bold text-2xl text-gray-900 mb-4 mt-12">Contact Information</h2>
             <p className="text-gray-700 leading-relaxed">
               For questions about these Terms of Use, please contact us at{' '}
-              <a href="mailto:legal@mycleverdeals.com" className="text-trust-600 hover:text-trust-700 font-semibold">
-                legal@mycleverdeals.com
+              <a href="mailto:cleverson128@hotmail.com" className="text-trust-600 hover:text-trust-700 font-semibold">
+                cleverson128@hotmail.com
               </a>
             </p>
           </div>
