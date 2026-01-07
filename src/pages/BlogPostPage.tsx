@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Calendar, User, Clock, ArrowLeft, ExternalLink } from 'lucide-react';
 import { blogPosts } from '@/constants/data';
 import NewsletterSection from '@/components/features/NewsletterSection';
@@ -11,6 +12,9 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="section-container py-20 text-center">
+        <Helmet>
+          <title>Post Not Found | MyCleverDeals</title>
+        </Helmet>
         <h1 className="font-display font-bold text-3xl mb-4">Post Not Found</h1>
         <Link to="/blog" className="text-trust-600 hover:text-trust-700 font-semibold">
           ← Back to Blog
@@ -24,6 +28,11 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{post.title} | MyCleverDeals Reviews</title>
+        <meta name="description" content={post.excerpt} />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-gray-50 py-8 border-b border-gray-200">
         <div className="section-container">
@@ -60,7 +69,7 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {/* Featured Image - Ajustado para não cortar na página do post */}
+      {/* Featured Image */}
       <section className="section-container py-8">
         <div className="max-w-4xl mx-auto">
           <div className="w-full bg-white rounded-2xl shadow-medium p-4 flex items-center justify-center">
@@ -81,7 +90,6 @@ export default function BlogPostPage() {
               {post.excerpt}
             </p>
 
-            {/* Renderiza o HTML vindo do data.ts */}
             {post.content ? (
               <div 
                 dangerouslySetInnerHTML={{ __html: post.content }} 
@@ -91,7 +99,7 @@ export default function BlogPostPage() {
               <p className="text-gray-500 italic">Content coming soon...</p>
             )}
 
-            {/* CTA Final com Link Correto */}
+            {/* CTA Final */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-center my-12">
               <h3 className="font-display font-bold text-2xl text-white mb-3">
                 Ready to Make Your Purchase?
@@ -100,7 +108,6 @@ export default function BlogPostPage() {
                 Check the latest prices and availability from trusted retailers
               </p>
               
-              {/* O LINK CORRIGIDO AQUI: */}
               <a
                 href={buyLink} 
                 target="_blank"
@@ -141,7 +148,6 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {/* Newsletter */}
       <NewsletterSection />
     </div>
   );

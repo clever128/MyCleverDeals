@@ -1,4 +1,5 @@
 import { Mail, MessageSquare, Send } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 
 export default function ContactPage() {
@@ -22,6 +23,11 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Contact Us | MyCleverDeals</title>
+        <meta name="description" content="Get in touch with the MyCleverDeals team for questions, support, or partnerships." />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-white border-b border-gray-200 py-12">
         <div className="section-container">

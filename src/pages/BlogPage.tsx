@@ -1,13 +1,19 @@
+import { Helmet } from 'react-helmet-async';
 import BlogCard from '@/components/features/BlogCard';
 import NewsletterSection from '@/components/features/NewsletterSection';
 import { blogPosts } from '@/constants/data';
 import { BookOpen } from 'lucide-react';
 
 export default function BlogPage() {
-  const categories = ['All', 'Electronics', 'Home & Kitchen', 'Fashion', 'Beauty & Wellness'];
+  const categories = ['All', 'Wellness & Vitality', 'Pain Relief', 'Weight & Fitness', 'Gadgets'];
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Reviews & Guides | MyCleverDeals</title>
+        <meta name="description" content="Read expert reviews and buying guides on the latest wellness supplements, fitness gear, and gadgets." />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-16 border-b border-gray-200">
         <div className="section-container">

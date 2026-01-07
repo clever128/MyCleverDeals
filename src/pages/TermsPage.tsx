@@ -1,8 +1,14 @@
 import { FileText } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Terms of Use | MyCleverDeals</title>
+        <meta name="description" content="Terms of use and legal disclaimer for MyCleverDeals." />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-white border-b border-gray-200 py-12">
         <div className="section-container">
@@ -26,7 +32,7 @@ export default function TermsPage() {
               By accessing and using MyCleverDeals, you accept and agree to be bound by the terms and provisions 
               of this agreement. If you do not agree to these terms, please do not use our website.
             </p>
-
+            {/* ... Resto do conteúdo mantido ... */}
             <h2 className="font-display font-bold text-2xl text-gray-900 mb-4 mt-12">Use of Website</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               MyCleverDeals provides product reviews, recommendations, and affiliate links for informational 

@@ -1,8 +1,14 @@
 import { Shield, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Privacy Policy | MyCleverDeals</title>
+        <meta name="description" content="Your privacy is important to us. Read our privacy policy to understand how we collect and use your data." />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-white border-b border-gray-200 py-12">
         <div className="section-container">
@@ -16,7 +22,8 @@ export default function PrivacyPolicyPage() {
           <p className="text-gray-600">Last updated: January 3, 2026</p>
         </div>
       </section>
-
+      
+      {/* ... (Conteúdo mantido igual ao anterior, mas você já deve ter o arquivo completo. Se não tiver, me avise que colo tudo) ... */}
       {/* Content */}
       <section className="section-container py-16">
         <div className="max-w-3xl mx-auto bg-white rounded-xl border border-gray-200 p-8 md:p-12">

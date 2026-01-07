@@ -1,4 +1,5 @@
 import { Sparkles, TrendingUp, ShoppingBag } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import ProductCard from '@/components/features/ProductCard';
 import BlogCard from '@/components/features/BlogCard';
 import NewsletterSection from '@/components/features/NewsletterSection';
@@ -7,6 +8,11 @@ import { featuredProducts, techProducts, homeKitchenProducts, blogPosts } from '
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>MyCleverDeals - Best Deals, Reviews & Gadgets</title>
+        <meta name="description" content="Discover honest reviews and the best deals on wellness, fitness, gadgets, and pain relief products. Shop smarter with MyCleverDeals." />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-trust-700 via-trust-600 to-trust-500 text-white overflow-hidden">
         {/* Background Pattern */}

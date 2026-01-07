@@ -1,8 +1,14 @@
 import { DollarSign, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function AffiliateDisclosurePage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Affiliate Disclosure | MyCleverDeals</title>
+        <meta name="description" content="Transparency is key. Learn how MyCleverDeals generates revenue through affiliate partnerships." />
+      </Helmet>
+
       {/* Header */}
       <section className="bg-white border-b border-gray-200 py-12">
         <div className="section-container">
@@ -39,8 +45,8 @@ export default function AffiliateDisclosurePage() {
               <li>Commission Junction</li>
               <li>Other merchant affiliate programs</li>
             </ul>
-
-            <h2 className="font-display font-bold text-2xl text-gray-900 mb-4 mt-12">How It Works</h2>
+            {/* ... Resto do conteúdo mantido ... */}
+             <h2 className="font-display font-bold text-2xl text-gray-900 mb-4 mt-12">How It Works</h2>
             <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-trust-600 flex-shrink-0 mt-0.5" />

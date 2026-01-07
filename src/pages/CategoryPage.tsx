@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import ProductCard from '@/components/features/ProductCard';
 import NewsletterSection from '@/components/features/NewsletterSection';
 import { allCategoryProducts } from '@/constants/data';
 import { Category } from '@/types';
 
-// Mapeamento: Define o Título e Ícone para CADA categoria (Antiga e Nova)
+// Mapeamento: Define o Título e Ícone para CADA categoria
 const categoryInfo: Record<string, { title: string; description: string; icon: string }> = {
   // --- NOVAS CATEGORIAS ---
   'weight-fitness': {
@@ -27,7 +28,7 @@ const categoryInfo: Record<string, { title: string; description: string; icon: s
     description: 'Smart tech to upgrade your daily life.',
     icon: '🚀',
   },
-  // --- CATEGORIAS ANTIGAS (Mantidas para segurança) ---
+  // --- CATEGORIAS ANTIGAS ---
   electronics: { title: 'Electronics', description: 'Latest tech gadgets', icon: '💻' },
   'home-living': { title: 'Home & Living', description: 'Upgrade your space', icon: '🏠' },
   fashion: { title: 'Fashion', description: 'Style essentials', icon: '👔' },
@@ -36,15 +37,15 @@ const categoryInfo: Record<string, { title: string; description: string; icon: s
 
 export default function CategoryPage() {
   const { category } = useParams<{ category: string }>();
-  // O "as string" evita conflito de tipos temporariamente
   const info = categoryInfo[category || ''] || null;
-  
-  // Busca produtos. Se não achar a categoria nova, tenta retornar array vazio para não dar erro
   const products = allCategoryProducts[category as keyof typeof allCategoryProducts] || [];
 
   if (!info) {
     return (
       <div className="section-container py-20 text-center">
+        <Helmet>
+          <title>Category Not Found | MyCleverDeals</title>
+        </Helmet>
         <h1 className="font-display font-bold text-3xl mb-4">Category Not Found</h1>
         <p className="text-gray-600 mb-6">We couldn't find the category: {category}</p>
         <a href="/" className="text-trust-600 hover:text-trust-700 font-semibold">
@@ -56,6 +57,11 @@ export default function CategoryPage() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>{info.title} Products | MyCleverDeals</title>
+        <meta name="description" content={info.description} />
+      </Helmet>
+
       {/* Header da Categoria */}
       <section className="bg-gradient-to-br from-gray-50 to-white py-16 border-b border-gray-200">
         <div className="section-container">
